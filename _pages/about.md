@@ -7,4 +7,4 @@ redirect_from:
   - /about.html
 ---
 
-Hello! I am a research assistant in Rasmus Kyng's Group at ETH Zürich.
+Hello! I am a first-year Ph.D. student in Rasmus Kyng's Group at ETH Zürich. I am interested in fast graph algorithms.
