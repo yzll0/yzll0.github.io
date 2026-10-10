@@ -1,4 +1,6 @@
 ---
+lang: en
+translation_key: cv
 layout: single
 title: "CV"
 permalink: /cv/
@@ -7,7 +9,7 @@ redirect_from:
   - /resume
 ---
 
-<div class="cv-download"><a href="/files/Weixuan_Yuan_CV.pdf">Open PDF</a> · <a href="/files/Weixuan_Yuan_CV.pdf" download>Download PDF</a></div>
+<div class="cv-download">CV: <a href="/files/Weixuan_Yuan_CV.pdf" lang="en" download>English PDF</a> | <a href="/files/Weixuan_Yuan_CV_zh.pdf" lang="zh-CN" download>中文 PDF</a></div>
 
 # Weixuan Yuan
 
@@ -26,15 +28,18 @@ Rasmus Kyng's group.
 **ETH Zürich — M.Sc. in Data Science** <span class="cv-date">September 2022–October 2024</span>  
 Willi Studer Prize (best graduate in the MSc Data Science program, 2025).
 
-**Xi'an Jiaotong University — B.Sc. in Mathematics** <span class="cv-date">September 2018–July 2022</span>
+**Xi'an Jiaotong University — B.Sc. in Mathematics** <span class="cv-date">September 2018–July 2022</span><br>
+<small>Honors Youth Program</small>
 
 ## Selected Research
 
-### AuXSpec: executable specifications and LLM reasoning
+### AuXSpec — Formalizing Programming Problems with LLMs
 
-- Proposed the executable-postcondition approach and co-designed the Lean specification format, connecting declarative and executable specifications through equivalence theorems.
-- Co-developed a multistage LLM-based agentic pipeline for formalization, verification, and repair, producing 3,037 problems with proven equivalence and 19.5K SFT samples.
-- Contributed to discussions of post-training methods, reward design, and experimental results. Team SFT/RL results reached SpecGen pass@4 of 60.3% on AuXSpec-Test and 84.7% on Verina (out of distribution).
+We study how to train LLMs to turn natural-language programming problems into formal mathematical specifications of correct outputs.
+
+- Proposed the executable-postcondition approach to efficiently test generated specifications; co-designed the Lean specification format.
+- Co-developed a multistage LLM-based pipeline for data synthesis, verification, and repair. The team produced 3,037 formalized LeetCode problems and approximately 19.5K SFT samples.
+- Contributed to post-training methodology and reward-design discussions and result analysis. The team's 27B model achieved SpecGen pass@4 of 60.3% on AuXSpec-Test and 84.7% on Verina after SFT/RL.
 
 ### Graph algorithms — FOCS 2025
 

@@ -1,0 +1,24 @@
+en:
+  home: /
+  name: Weixuan Yuan
+  location: Zürich, Switzerland
+  employer: ETH Zürich
+  contact: Contact
+  email: Email
+  menu: Open navigation menu
+  languages: Language
+  sitemap: Sitemap
+  powered: Powered by
+  updated: Site last updated
+zh-CN:
+  home: /zh/
+  name: 袁伟轩
+  location: 瑞士苏黎世
+  employer: 苏黎世联邦理工学院
+  contact: 联系方式
+  email: 邮箱
+  menu: 打开导航菜单
+  languages: 语言
+  sitemap: 网站地图
+  powered: 网站基于
+  updated: 最近更新

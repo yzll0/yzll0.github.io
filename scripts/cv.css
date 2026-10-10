@@ -1,12 +1,12 @@
-@page { size: A4; margin: 15mm 17mm 16mm; }
+@page { size: A4; margin: 13mm 17mm 14mm; }
 * { box-sizing: border-box; }
 body { font-family: "Times New Roman", "Liberation Serif", serif; font-size: 11pt; line-height: 1.25; color: #191919; margin: 0; }
 h1 { font-size: 22pt; margin: 0 0 6pt; font-weight: 600; }
-h2 { font-size: 12.5pt; margin: 8pt 0 5pt; padding-bottom: 3pt; border-bottom: .6pt solid #777; }
-h3 { font-size: 11.5pt; margin: 8pt 0 4pt; }
-p { margin: 0 0 5pt; }
-ul { margin: 4pt 0 6pt; padding-left: 15pt; }
-li { padding-left: 1pt; margin-bottom: 4pt; }
+h2 { font-size: 12.5pt; margin: 6pt 0 4pt; padding-bottom: 3pt; border-bottom: .6pt solid #777; }
+h3 { font-size: 11.5pt; margin: 7pt 0 3pt; }
+p { margin: 0 0 4pt; }
+ul { margin: 3pt 0 5pt; padding-left: 15pt; }
+li { padding-left: 1pt; margin-bottom: 3pt; }
 h1, h2, h3 { break-after: avoid; }
 p, li { orphans: 3; widows: 3; }
 p, li { break-inside: avoid; }
@@ -14,3 +14,5 @@ a { color: #184c70; text-decoration: none; }
 sup { font-size: 8pt; line-height: 0; }
 .cv-date { float: right; font-weight: normal; white-space: nowrap; font-size: 10pt; }
 .cv-download { display: none; }
+html:lang(zh-CN) body { font-family: "Times New Roman", "CV Noto Serif", serif; line-height: 1.25; }
+html:lang(zh-CN) h1 { font-weight: 700; }

@@ -5,3 +5,11 @@ main:
     url: /publications/
   - title: "CV"
     url: /cv/
+
+zh:
+  - title: "关于我"
+    url: /zh/
+  - title: "论文"
+    url: /zh/publications/
+  - title: "简历"
+    url: /zh/cv/
