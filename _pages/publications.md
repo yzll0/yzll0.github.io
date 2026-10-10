@@ -9,7 +9,7 @@ author_profile: true
 **Deterministic Almost-Linear-Time Gomory-Hu Trees**  
 Amir Abboud, Rasmus Kyng, Jason Li, Debmalya Panigrahi, Maximilian Probst Gutenberg, Thatchaphol Saranurak, **Weixuan Yuan**, Wuwei Yuan.  
 *IEEE Symposium on Foundations of Computer Science (FOCS 2025)*. [[paper](https://arxiv.org/abs/2507.20354)] [[slides](https://ywwywwyww.github.io/files/DeterGHTreeSlides.pdf)]  
-First deterministic <i>m</i><sup>1+o(1)</sup>-time algorithm for Gomory-Hu trees. Presented at FOCS 2025 by Weixuan Yuan and Wuwei Yuan.
+Presented at FOCS 2025 by Weixuan Yuan and Wuwei Yuan.
 
 Author order in theoretical computer science papers is alphabetical.
 
