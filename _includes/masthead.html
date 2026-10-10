@@ -1,26 +1,22 @@
 {% include base_path %}
-{% assign page_lang = page.lang | default: 'en' %}
-{% assign nav_ui = site.data.interface[page_lang] %}
-{% assign paired_urls = site.data.translations[page.translation_key] | default: site.data.translations.about %}
-{% assign nav_links = site.data.navigation.main %}
-{% if page_lang == 'zh-CN' %}{% assign nav_links = site.data.navigation.zh %}{% endif %}
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav" aria-label="{{ nav_ui.menu }}">
-        <button aria-label="{{ nav_ui.menu }}"><div class="navicon"></div></button>
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}{{ nav_ui.home }}">{{ nav_ui.name }}</a></li>
-          {% for link in nav_links %}
-            <li class="masthead__menu-item"><a href="{{ base_path }}{{ link.url }}">{{ link.title }}</a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title }}</a></li>
+          {% for link in site.data.navigation.main %}
+            {% if link.url contains 'http' %}
+              {% assign domain = '' %}
+              {% else %}
+              {% assign domain = base_path %}
+            {% endif %}
+            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>
-      </nav>
-      <nav class="language-switch" aria-label="{{ nav_ui.languages }}">
-        <a href="{{ base_path }}{{ paired_urls.en }}" lang="en" hreflang="en"{% if page_lang == 'en' %} aria-current="page"{% endif %}>EN</a>
-        <span aria-hidden="true">|</span>
-        <a href="{{ base_path }}{{ paired_urls['zh-CN'] }}" lang="zh-CN" hreflang="zh-CN"{% if page_lang == 'zh-CN' %} aria-current="page"{% endif %}>中文</a>
       </nav>
     </div>
   </div>

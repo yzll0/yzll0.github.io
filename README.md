@@ -6,8 +6,7 @@ AcademicPages/Jekyll website for `yzll0.github.io`. Keep the existing theme and 
 
 - `_pages/about.md`: biography and selected research.
 - `_pages/publications.md`: selected published papers, followed by the under-review manuscript.
-- `_pages/cv.md` and `_pages/zh/cv.md`: **one manually maintained CV source per language**, shared by each webpage and its PDF.
-- `_pages/zh/about.md` and `_pages/zh/publications.md`: Chinese biography and publications. Keep facts, official English paper titles, author lists, and links consistent between languages.
+- `_pages/cv.md`: **the only manually maintained source of CV content**, shared by `/cv/` and the PDF.
 - `_data/navigation.yml`: navigation; `_config.yml`: identity, contact details, collections, and build exclusions.
 - `scripts/cv.css`: PDF typography only; `assets/css/profile.css`: small website reading adjustments.
 
@@ -28,16 +27,14 @@ On macOS, the builder automatically uses an installed Google Chrome with a fresh
 
 On Linux, Playwright may also require system browser libraries (`playwright install --with-deps chromium`). An alternative Chrome installation can be selected with `CV_CHROME_PATH=/absolute/path/to/chrome`.
 
-After editing either CV Markdown file:
+After editing `_pages/cv.md`:
 
 ```sh
 make cv
-# Both languages; equivalent: .venv/bin/python scripts/build_cv.py
-make cv-en  # English only (--lang en)
-make cv-zh  # Chinese only (--lang zh)
+# Equivalent: .venv/bin/python scripts/build_cv.py
 ```
 
-Outputs: `files/Weixuan_Yuan_CV.pdf` and `files/Weixuan_Yuan_CV_zh.pdf`. The original English download URL remains unchanged. The script removes YAML front matter, renders the remaining Markdown/HTML, hides the web download controls in print, and generates a searchable A4 PDF with clickable links and page numbers. Rendering makes no network requests. It checks each PDF for 1–2 pages and extractable text, plus key Chinese phrases, before replacing any requested output. Chinese uses bundled Noto Serif CJK SC Regular/Bold fonts (see `scripts/fonts/README.md` and the OFL license), loaded locally and embedded in the PDF; no system Chinese font or network access is required. Keep the body free of Liquid template tags; use portable Markdown and small HTML elements for dates. Pagination is automatic; avoid forced page breaks.
+Output: `files/Weixuan_Yuan_CV.pdf`. The script removes YAML front matter, renders the remaining Markdown/HTML, hides the web download controls in print, and generates a searchable A4 PDF with clickable links and page numbers. Rendering makes no network requests. It checks for 1–2 pages and extractable text before replacing the output. Keep the body free of Liquid template tags; use portable Markdown and small HTML elements for dates. Pagination is automatic; avoid forced page breaks.
 
 To generate page images for visual review, install Poppler (`pdftoppm`) and run:
 
@@ -45,19 +42,7 @@ To generate page images for visual review, install Poppler (`pdftoppm`) and run:
 make cv-preview
 ```
 
-Review **every** `tmp/pdfs/en/cv-page-*.png` and `tmp/pdfs/zh/cv-page-*.png` after content/layout changes. HTML previews are in the same language directories. For one language, run `.venv/bin/python scripts/build_cv.py --lang zh --preview`. All preview files are ignored by Git and excluded from Jekyll.
-
-## Bilingual pages
-
-| Page | English (default) | Chinese |
-| --- | --- | --- |
-| Home | `/` | `/zh/` |
-| Publications | `/publications/` | `/zh/publications/` |
-| CV | `/cv/` | `/zh/cv/` |
-
-Each page declares `lang` (`en` or `zh-CN`) and a shared `translation_key` in its front matter. `_data/translations.yml` maps keys to paired URLs. The small Liquid language switch in `_includes/masthead.html` sits outside the collapsing navigation, remains visible on mobile, and opens the corresponding page. There is no automatic language redirect or multilingual framework. Navigation labels live in `_data/navigation.yml`, shared interface labels in `_data/interface.yml`; the HTML language and alternate `hreflang` links follow the same front matter.
-
-Both homepages and CV pages offer both PDF downloads. To add another translated page, add its pair to the mapping and its navigation entries, then use the same translation key in both sources. Translations are maintained manually; each PDF is generated automatically from its own CV Markdown. Preserve official publication titles and author lists in English.
+Review **every** `tmp/pdfs/cv-page-*.png` after content/layout changes. The HTML preview is `tmp/pdfs/Weixuan_Yuan_CV.html`. All preview files are ignored by Git and excluded from Jekyll.
 
 ## Build and preview the website
 
@@ -70,7 +55,7 @@ bundle exec jekyll build
 bundle exec jekyll serve --host 127.0.0.1
 ```
 
-Open `http://127.0.0.1:4000/`. After a build, run `python3 scripts/check_site.py` to verify local links, all six bilingual pages, language and reciprocal alternate links, switch destinations, both PDF downloads, sitemap entries, template cleanup, and reference-input exclusions. `make site` is an alias for the build. The generated `_site/` is ignored. Jekyll's sitemap plugin generates `sitemap.xml`; there is no hand-maintained sitemap. GitHub Pages does not regenerate the CV PDF: rebuild it locally whenever its Markdown changes.
+Open `http://127.0.0.1:4000/`. After a build, run `python3 scripts/check_site.py` to verify local links, sitemap entries, template cleanup, and reference-input exclusions. `make site` is an alias for the build. The generated `_site/` is ignored. Jekyll's sitemap plugin generates `sitemap.xml`; there is no hand-maintained sitemap. GitHub Pages does not regenerate the CV PDF: rebuild it locally whenever its Markdown changes.
 
 ## Publication review before any commit or push
 

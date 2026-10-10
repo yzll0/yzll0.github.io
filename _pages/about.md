@@ -1,6 +1,4 @@
 ---
-lang: en
-translation_key: about
 permalink: /
 title: "About me"
 author_profile: true
@@ -19,6 +17,4 @@ I received my M.Sc. in Data Science from ETH Zürich in 2024 and my B.Sc. (Honor
 
 **AuXSpec.** We study how to train language models to generate formal mathematical descriptions of correct outputs from natural-language programming problems. We develop a way to test these descriptions efficiently, providing scalable feedback for model training. Co-first author; under review at ICLR 2027.
 
-See my [selected publications](/publications/) for paper details and my [CV](/cv/) for research experience.
-
-<div class="cv-download">CV: <a href="/files/Weixuan_Yuan_CV.pdf" lang="en" download>English PDF</a> | <a href="/files/Weixuan_Yuan_CV_zh.pdf" lang="zh-CN" download>中文 PDF</a></div>
+See my [selected publications](/publications/) for paper details and my [CV](/cv/) ([PDF](/files/Weixuan_Yuan_CV.pdf)) for research experience.

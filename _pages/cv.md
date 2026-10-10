@@ -1,6 +1,4 @@
 ---
-lang: en
-translation_key: cv
 layout: single
 title: "CV"
 permalink: /cv/
@@ -9,7 +7,7 @@ redirect_from:
   - /resume
 ---
 
-<div class="cv-download">CV: <a href="/files/Weixuan_Yuan_CV.pdf" lang="en" download>English PDF</a> | <a href="/files/Weixuan_Yuan_CV_zh.pdf" lang="zh-CN" download>中文 PDF</a></div>
+<div class="cv-download"><a href="/files/Weixuan_Yuan_CV.pdf">Open PDF</a> · <a href="/files/Weixuan_Yuan_CV.pdf" download>Download PDF</a></div>
 
 # Weixuan Yuan
 

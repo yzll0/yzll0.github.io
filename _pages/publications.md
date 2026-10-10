@@ -1,6 +1,4 @@
 ---
-lang: en
-translation_key: publications
 title: "Selected Publications"
 permalink: /publications/
 author_profile: true

@@ -3,10 +3,3 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css">
 <link rel="stylesheet" href="{{ base_path }}/assets/css/profile.css">
-
-{% if page.translation_key %}
-  {% assign alternate_urls = site.data.translations[page.translation_key] %}
-  <link rel="alternate" hreflang="en" href="{{ base_path }}{{ alternate_urls.en }}">
-  <link rel="alternate" hreflang="zh-CN" href="{{ base_path }}{{ alternate_urls['zh-CN'] }}">
-  <link rel="alternate" hreflang="x-default" href="{{ base_path }}{{ alternate_urls.en }}">
-{% endif %}
