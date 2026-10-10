@@ -1,18 +1,16 @@
-@page { size: A4; margin: 17mm 18mm 18mm; }
+@page { size: A4; margin: 15mm 17mm 16mm; }
 * { box-sizing: border-box; }
-body { font-family: "Times New Roman", "Liberation Serif", serif; font-size: 11pt; line-height: 1.31; color: #191919; margin: 0; }
-h1 { font-size: 24pt; margin: 0 0 6pt; font-weight: 600; }
-h2 { font-size: 13pt; margin: 15pt 0 7pt; padding-bottom: 3pt; border-bottom: .6pt solid #777; }
-h3 { font-size: 11.5pt; margin: 11pt 0 5pt; }
-p { margin: 0 0 8pt; }
-ul { margin: 5pt 0 8pt; padding-left: 15pt; }
-li { padding-left: 1pt; margin-bottom: 5pt; }
+body { font-family: "Times New Roman", "Liberation Serif", serif; font-size: 11pt; line-height: 1.25; color: #191919; margin: 0; }
+h1 { font-size: 22pt; margin: 0 0 6pt; font-weight: 600; }
+h2 { font-size: 12.5pt; margin: 8pt 0 5pt; padding-bottom: 3pt; border-bottom: .6pt solid #777; }
+h3 { font-size: 11.5pt; margin: 8pt 0 4pt; }
+p { margin: 0 0 5pt; }
+ul { margin: 4pt 0 6pt; padding-left: 15pt; }
+li { padding-left: 1pt; margin-bottom: 4pt; }
 h1, h2, h3 { break-after: avoid; }
 p, li { orphans: 3; widows: 3; }
-p { break-inside: avoid; }
+p, li { break-inside: avoid; }
 a { color: #184c70; text-decoration: none; }
 sup { font-size: 8pt; line-height: 0; }
 .cv-date { float: right; font-weight: normal; white-space: nowrap; font-size: 10pt; }
 .cv-download { display: none; }
-.cv-page-break { break-before: page; }
-.cv-page-break + h2 { margin-top: 0; }

@@ -13,40 +13,32 @@ redirect_from:
 
 Zürich, Switzerland · [weixuan.yuan@inf.ethz.ch](mailto:weixuan.yuan@inf.ethz.ch) · [yzll0.github.io](https://yzll0.github.io/)
 
-Research internship interests: LLM reasoning and post-training; AI for mathematics and theoretical computer science; graph algorithms.
+Research internship interests: LLM reasoning, post-training, and AI for mathematics and TCS.
 
-## Education
+## Education & Research Positions
 
-**ETH Zürich — Ph.D. in Computer Science** <span class="cv-date">May 2025–present</span>  
-Advisor: Prof. Rasmus Kyng. Research in theoretical computer science and algorithms, with AI-related research.
+**ETH Zürich — Ph.D. in Computer Science** <span class="cv-date">May 2025–Present</span>  
+Advisor: Prof. Rasmus Kyng.
+
+**ETH Zürich — Research Assistant** <span class="cv-date">October 2024–April 2025</span>  
+Rasmus Kyng's group.
 
 **ETH Zürich — M.Sc. in Data Science** <span class="cv-date">September 2022–October 2024</span>  
-GPA: 5.92/6.00.
+Willi Studer Prize (best graduate in the MSc Data Science program, 2025).
 
-**Xi'an Jiaotong University — B.Sc. in Mathematics** <span class="cv-date">September 2018–July 2022</span>  
-GPA: 93.43/100.
+**Xi'an Jiaotong University — B.Sc. in Mathematics** <span class="cv-date">September 2018–July 2022</span>
 
-## Research Experience
-
-**ETH Zürich — Research Assistant, Rasmus Kyng's group** <span class="cv-date">October 2024–April 2025</span>  
-Research on deterministic graph algorithms; continued as a Ph.D. student from May 2025.
+## Selected Research
 
 ### AuXSpec: executable specifications and LLM reasoning
 
-*Co-first author; under review at ICLR 2027.*
+- Proposed the executable-postcondition approach and co-designed the Lean specification format, connecting declarative and executable specifications through equivalence theorems.
+- Co-developed a multistage LLM-based agentic pipeline for formalization, verification, and repair, producing 3,037 problems with proven equivalence and 19.5K SFT samples.
+- Contributed to discussions of post-training methods, reward design, and experimental results. Team SFT/RL results reached SpecGen pass@4 of 60.3% on AuXSpec-Test and 84.7% on Verina (out of distribution).
 
-- Proposed the executable-postcondition approach and contributed substantially to the Lean specification format, linking declarative specifications to executable counterparts through equivalence theorems.
-- Co-developed a multistage, LLM-based agentic data synthesis pipeline using executable checks as verifiable feedback.
-- Independently completed expert review of 300 benchmark problems and audited 60 generated outputs, confirming 55 as correct.
-- Contributed to discussions of post-training methods, reward design, results, and analysis with the co-first author responsible for training.
-- **Team results:** 3,037 LeetCode problems with proven equivalence and 19,492 SFT samples. After SFT/RL, Qwen3.8-27B improved SpecGen pass@4 from 0.7% to 60.3% on AuXSpec-Test and from 21.9% to 84.7% on the Verina out-of-distribution benchmark.
+### Graph algorithms — FOCS 2025
 
-### Deterministic graph algorithms
-
-- Co-authored the first deterministic almost-linear-time algorithm for Gomory-Hu trees, with running time <i>m</i><sup>1+o(1)</sup> (*FOCS 2025*).
-- Presented the paper at FOCS 2025. [[slides](https://ywwywwyww.github.io/files/DeterGHTreeSlides.pdf)]
-
-<div class="cv-page-break"></div>
+Co-authored the first deterministic almost-linear-time Gomory-Hu tree algorithm, running in <i>m</i><sup>1+o(1)</sup> time. Presented the paper at the IEEE Symposium on Foundations of Computer Science (FOCS 2025). [[slides](https://ywwywwyww.github.io/files/DeterGHTreeSlides.pdf)]
 
 ## Selected Publications
 
@@ -62,23 +54,14 @@ Xuehu Zhu<sup>†</sup>, **Weixuan Yuan**<sup>†</sup>, Zongben Xu, Wenlin Dai.
 Xinru Jia<sup>†</sup>, **Weixuan Yuan**<sup>†</sup>, Xingqiu Zhao, Xuehu Zhu.  
 *Scandinavian Journal of Statistics* 53(1), 575-611, 2026. [[paper](https://doi.org/10.1111/sjos.70052)]
 
-<sup>†</sup> Equal contribution. Author order in theoretical computer science papers is alphabetical. The statistics research was carried out during undergraduate studies (before 2023).
+<sup>†</sup> Equal contribution. Author order in theoretical computer science papers is alphabetical. The statistics research was conducted during my undergraduate studies (before 2023).
 
 ## Under-Review Manuscript
 
 **AuXSpec: Learning to Autoformalize Program Specifications via Executable Postconditions**  
 Co-first author; under review at ICLR 2027. Not yet publicly available.
 
-## Honors
-
-**Willi Studer Prize, ETH Zürich** <span class="cv-date">2025</span>  
-Best graduate of the Master's programme in Data Science. [[announcement](https://inf.ethz.ch/news-and-events/spotlights/infk-news-channel/2025/09/eth-medals-and-willi-studer-prizes-for-masters-graduates.html)]
-
 ## Technical Skills
 
-**Tools:** Python; Lean 4 and formal verification.  
-**Research background:** Graph algorithms; mathematical and statistical methods; optimization, including gradient-based optimization.
-
-## Teaching
-
-Teaching Assistant at ETH Zürich for *Big Data* and *Algorithms & Probability*.
+**Programming:** Python, Lean 4.  
+**Theory:** Algorithms; probability and statistics; optimization, including gradient-based methods.

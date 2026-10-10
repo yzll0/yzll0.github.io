@@ -3,7 +3,11 @@
 .page__content p, .page__content li { line-height: 1.65; }
 .page__content sup { line-height: 0; }
 .cv-download { margin-bottom: 1.5rem; }
-.cv-date { display: block; color: #666; font-size: .85em; font-weight: normal; }
+.cv-date { display: block; white-space: nowrap; color: #666; font-size: .85em; font-weight: normal; }
 @media (min-width: 1200px) {
   .cv-date { float: right; margin-left: 1rem; }
+}
+
+@media (max-width: 1199px) {
+  .cv-date + br { display: none; }
 }
