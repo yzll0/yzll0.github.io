@@ -11,10 +11,10 @@ locale                   : "en-US"
 title                    : "Weixuan Yuan"
 title_separator          : "-"
 name                     : &name "Weixuan Yuan"
-description              : &description "personal description"
+description              : &description "Ph.D. student at ETH Zürich. Graph algorithms, theoretical computer science, and AI research."
 url                      : https://yzll0.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "yzll0.github.io"
+repository               : "yzll0/yzll0.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -25,7 +25,7 @@ author:
   name             : "Weixuan Yuan"
   pronouns         : # example: "she/her"  
   bio              : " "
-  #location         : "Earth"
+  location         : "Zürich, Switzerland"
   employer         : "ETH Zürich"
   #uri              : # URL
   email            : "weixuan.yuan@inf.ethz.ch" 
@@ -87,7 +87,7 @@ publication_category:
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
-future                   : true
+future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
@@ -117,7 +117,7 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
+  hide                   : true     # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
 
 
@@ -157,6 +157,17 @@ include:
   - _pages
   - files
 exclude:
+  - CV.pdf
+  - "codex_homepage_cv_prompt*.md"
+  - scripts
+  - Makefile
+  - .venv
+  - .playwright
+  - markdown_generator
+  - talkmap
+  - talkmap.py
+  - talkmap.ipynb
+  - CONTRIBUTING.md
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache

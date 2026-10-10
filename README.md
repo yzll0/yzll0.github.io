@@ -1,119 +1,80 @@
-# Academic Pages
-**Academic Pages is a Github Pages template for academic websites.**
+# Weixuan Yuan's academic homepage
 
-![Academic Pages template example](images/homepage.png "Academic Pages template example")
+AcademicPages/Jekyll website for `yzll0.github.io`. Keep the existing theme and GitHub Pages build model.
 
-# Getting Started
+## Content
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+- `_pages/about.md`: biography and selected research.
+- `_pages/publications.md`: selected published papers, followed by the under-review manuscript.
+- `_pages/cv.md`: **the only manually maintained source of CV content**, shared by `/cv/` and the PDF.
+- `_data/navigation.yml`: navigation; `_config.yml`: identity, contact details, collections, and build exclusions.
+- `scripts/cv.css`: PDF typography only; `assets/css/profile.css`: small website reading adjustments.
 
-See more info at https://academicpages.github.io/
+## Rebuild the CV (no LaTeX)
 
-## Running locally
+Python 3.10+ and Chrome or Playwright Chromium are sufficient. First-time setup:
 
-When you are initially working your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
-
-1. Clone the repository and made updates as detailed above.
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-Start by build the container:
-
-```bash
-docker build -t jekyll-site .
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r scripts/requirements-cv.txt
 ```
 
-Next, run the container:
-```bash
-docker run -p 4000:4000 --rm -v $(pwd):/usr/src/app jekyll-site
+On macOS, the builder automatically uses an installed Google Chrome with a fresh temporary profile. Otherwise, install the browser once:
+
+```sh
+.venv/bin/python -m playwright install chromium
 ```
 
-To run the `docker run` command on Windows, you need to adjust the syntax for the volume mapping (`-v`) as Windows uses different path formats. Here's how to run your command on Windows:
+On Linux, Playwright may also require system browser libraries (`playwright install --with-deps chromium`). An alternative Chrome installation can be selected with `CV_CHROME_PATH=/absolute/path/to/chrome`.
 
-### Steps for Windows:
-1. **Check Docker Installation**: Ensure Docker is installed and running.
-2. **Adjust Path for Volume Mapping**:
+After editing `_pages/cv.md`:
 
-   - On Windows, replace `$(pwd)` with the full absolute path to your current directory. For example:
-
-     ```bash
-     -v C:\path\to\your\site:/usr/src/app
-     ```
-
-### Full Command Example:
-```bash
-docker run -p 4000:4000 --rm -v C:\path\to\your\site:/usr/src/app jekyll-site
+```sh
+make cv
+# Equivalent: .venv/bin/python scripts/build_cv.py
 ```
 
-### Things to Keep in Mind:
-1. **Use PowerShell**:
-   - If you are using PowerShell, you can use `${PWD}` for the current directory:
-     ```bash
-     docker run -p 4000:4000 --rm -v ${PWD}:/usr/src/app jekyll-site
-     ```
+Output: `files/Weixuan_Yuan_CV.pdf`. The script removes YAML front matter, renders the remaining Markdown/HTML, hides the web download controls in print, and generates a searchable A4 PDF with clickable links and page numbers. Rendering makes no network requests. It checks for 1–2 pages and extractable text before replacing the output. Keep the body free of Liquid template tags; use portable Markdown and small HTML elements for dates and print pagination.
 
-2. **Enable Docker File Sharing**:
-   - If your volume doesn't map correctly, ensure Docker has access to the drive where your project resides. To do this:
-     - Open Docker Desktop.
-     - Go to *Settings* → *Resources* → *File Sharing*.
-     - Add your drive (e.g., `C:`).
+To generate page images for visual review, install Poppler (`pdftoppm`) and run:
 
-3. **Run in Command Prompt or PowerShell**:
-   - In *Command Prompt*:
-   
-     ```bash
-     docker run -p 4000:4000 --rm -v C:\path\to\your\site:/usr/src/app jekyll-site
-     ```
-   - In *PowerShell*:
+```sh
+make cv-preview
+```
 
-     ```bash
-     docker run -p 4000:4000 --rm -v ${PWD}:/usr/src/app jekyll-site
-     ```
+Review **every** `tmp/pdfs/cv-page-*.png` after content/layout changes. The HTML preview is `tmp/pdfs/Weixuan_Yuan_CV.html`. All preview files are ignored by Git and excluded from Jekyll.
 
-# Maintenance
+## Build and preview the website
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+Use a current Ruby (3.1+ recommended) and Bundler. If using a custom bundle directory, choose a path without `:` (the checkout name `CV:page` is incompatible with Bundler's `vendor/bundle` path). Keep dependencies outside the checkout in that case:
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
+```sh
+bundle config set --local path /tmp/weixuan-jekyll-bundle
+bundle install
+bundle exec jekyll build
+bundle exec jekyll serve --host 127.0.0.1
+```
 
-## Bugfixes and enhancements
+Open `http://127.0.0.1:4000/`. After a build, run `python3 scripts/check_site.py` to verify local links, sitemap entries, template cleanup, and reference-input exclusions. `make site` is an alias for the build. The generated `_site/` is ignored. Jekyll's sitemap plugin generates `sitemap.xml`; there is no hand-maintained sitemap. GitHub Pages does not regenerate the CV PDF: rebuild it locally whenever its Markdown changes.
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
+## Publication review before any commit or push
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+**This local draft contains unpublished AuXSpec material** in the homepage, publications page, CV source, and generated PDF. Publishing any of these to this public repository associates Weixuan Yuan with the ICLR 2027 submission. Review the anonymity/publication policy and the co-first-author wording before publishing. No unpublished collaborator names, manuscript PDF, or private source code are included.
 
----
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
+The old root-level `CV.pdf` and the task prompt are private reference inputs: they are ignored by Git and explicitly excluded from the Jekyll output. These exclusions do not protect files already committed or manually force-added. Check the complete staged diff before any future publication.
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+Pending personal checks: AuXSpec disclosure and co-first-author wording; whether there is enough completed hands-on training work to list PyTorch (currently omitted); the contact email `weixuan.yuan@inf.ethz.ch`.
+
+## Source verification (10 October 2026)
+
+- [arXiv](https://arxiv.org/abs/2507.20354): FOCS paper title, all eight authors, deterministic almost-linear running time.
+- [FOCS slides](https://ywwywwyww.github.io/files/DeterGHTreeSlides.pdf): accessible PDF; matching title, authors, and FOCS 2025 label. The fact that Weixuan presented is supplied by the owner.
+- [Springer publisher page](https://link.springer.com/article/10.1007/s11425-023-2343-7): PCA paper, 2025, author order; Xuehu Zhu and Weixuan Yuan share the equal-contribution author note.
+- [Wiley publisher page](https://onlinelibrary.wiley.com/doi/10.1111/sjos.70052): dimension-reduction paper, 2026, author order; Xinru Jia and Weixuan Yuan contributed equally.
+- [ETH announcement](https://inf.ethz.ch/news-and-events/spotlights/infk-news-channel/2025/09/eth-medals-and-willi-studer-prizes-for-masters-graduates.html): Willi Studer Prize 2025, best Data Science Master's graduate (not an ETH Medal).
+
+Education dates, GPA, teaching, research contributions, and unpublished AuXSpec results follow the owner's updated fact sheet. The older CV is reference material only. No withdrawn papers are included.
+
+## Theme
+
+Based on [AcademicPages](https://github.com/academicpages/academicpages.github.io), derived from Minimal Mistakes. See `LICENSE`.

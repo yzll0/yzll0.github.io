@@ -11,3 +11,13 @@ Gemfile.lock
 # Ingore files created by npm
 node_modules
 package-lock.json
+
+# Local dependencies, generated previews, and private reference inputs
+.venv/
+.playwright/
+vendor/
+tmp/
+.jekyll-cache/
+/CV.pdf
+/codex_homepage_cv_prompt*.md
+/.bundle/
