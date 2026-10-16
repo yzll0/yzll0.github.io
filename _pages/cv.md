@@ -11,22 +11,22 @@ redirect_from:
 
 # Weixuan Yuan
 
-Zürich, Switzerland · [weixuan.yuan@inf.ethz.ch](mailto:weixuan.yuan@inf.ethz.ch) · [yzll0.github.io](https://yzll0.github.io/)
+Zürich, Switzerland (open to relocation) · [weixuan.yuan@inf.ethz.ch](mailto:weixuan.yuan@inf.ethz.ch) · [Homepage](https://yzll0.github.io/)
 
-**Research interests:** LLM post-training with verifiable feedback (formal specifications, executable checks); agent harnesses for mathematical and algorithmic research; formal verification in Lean 4.
+**Research interests:** LLM reasoning, post-training (RLVR, synthetic data), AI for math and formal verification (Lean&nbsp;4), agent harnesses, theoretical computer science (graph algorithms).
 
-**Available for internships** from January 2027 (3–6 months, location flexible).
+**Seeking research internships:** post-training, AI for math, agent harnesses (from January 2027, 3–6 months).
 
 ## Education
 
-**ETH Zürich — Ph.D. in Computer Science** <span class="cv-date">May 2025–Present</span>  
-Advisor: Prof. Rasmus Kyng. Research Assistant in the same group, October 2024–April 2025.
+**ETH Zürich — Ph.D. in Computer Science** <span class="cv-date">May 2025–May 2029 (expected)</span>  
+Advisor: Prof. Rasmus Kyng. Joined the group as a Research Assistant in October 2024.
 
 **ETH Zürich — M.Sc. in Data Science** <span class="cv-date">September 2022–October 2024</span>  
-Willi Studer Prize (2025), awarded to the best graduate of the M.Sc. in Data Science program.
+GPA 5.92 / 6.00 (ranked 1st; Willi Studer Prize 2025).
 
 **Xi'an Jiaotong University — B.Sc. in Mathematics** <span class="cv-date">September 2018–July 2022</span>  
-Honors Youth Program
+GPA 93.43 / 100 · Honors Youth Program.
 
 ## Selected Research
 
@@ -45,9 +45,6 @@ Co-authored the first deterministic almost-linear-time algorithm for Gomory–Hu
 
 ## Publications
 
-**AuXSpec: Learning to Autoformalize Program Specifications via Executable Postconditions**  
-Co-first author. Under review at ICLR 2027; manuscript not yet publicly available.
-
 **Deterministic Almost-Linear-Time Gomory-Hu Trees**  
 Amir Abboud, Rasmus Kyng, Jason Li, Debmalya Panigrahi, Maximilian Probst Gutenberg, Thatchaphol Saranurak, **Weixuan Yuan**, Wuwei Yuan.  
 *IEEE Symposium on Foundations of Computer Science (FOCS 2025)*. Authors listed alphabetically. [[paper](https://arxiv.org/abs/2507.20354)]
@@ -59,4 +56,4 @@ Xinru Jia<sup>†</sup>, **Weixuan Yuan**<sup>†</sup>, Xingqiu Zhao, Xuehu Zhu
 ## Technical Skills
 
 **Programming:** Python, Lean 4.  
-**Theory:** Algorithms; probability and statistics; optimization, including gradient-based methods.
+**Agentic tools:** Codex, Claude Code (daily use; custom skills and AGENTS.md-based workflows).
