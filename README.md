@@ -65,7 +65,7 @@ The old root-level `CV.pdf` and the task prompt are private reference inputs: th
 
 PyTorch is intentionally omitted at the owner's request, pending sufficient hands-on practice. The contact email remains `weixuan.yuan@inf.ethz.ch`. Update the under-review status when it changes.
 
-## Source verification (10 October 2026)
+## Source verification (16 October 2026)
 
 - [arXiv](https://arxiv.org/abs/2507.20354): FOCS paper title, all eight authors, deterministic almost-linear running time.
 - [FOCS conference](https://focs.computer.org/2025/): full conference name, IEEE Symposium on Foundations of Computer Science.
@@ -75,6 +75,8 @@ PyTorch is intentionally omitted at the owner's request, pending sufficient hand
 - [ETH announcement](https://inf.ethz.ch/news-and-events/spotlights/infk-news-channel/2025/09/eth-medals-and-willi-studer-prizes-for-masters-graduates.html): Willi Studer Prize 2025, best Data Science Master's graduate (not an ETH Medal).
 
 Education dates, research contributions, and AuXSpec results follow the owner's updated fact sheet. The CV omits GPA and teaching, places the Willi Studer Prize with the MSc, and rounds 19,492 SFT samples to 19.5K. The older CV is reference material only. No withdrawn papers are included.
+
+The 16 October proofreading pass targets industry research roles. The owner confirmed no factual updates since 10 October. The CV now includes the independently completed review of 300 benchmark problems and audit of 60 generated specifications, distinguishes personal contributions from team training results, and matches the existing publications page's credit to both FOCS presenters. The PDF remains one A4 page at 11pt. Jekyll builds, 81 local links/assets, desktop/mobile navigation and downloads, and matching web/PDF body content were verified.
 
 ## Theme
 

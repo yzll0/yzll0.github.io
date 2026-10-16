@@ -11,7 +11,7 @@ Amir Abboud, Rasmus Kyng, Jason Li, Debmalya Panigrahi, Maximilian Probst Gutenb
 *IEEE Symposium on Foundations of Computer Science (FOCS 2025)*. [[paper](https://arxiv.org/abs/2507.20354)] [[slides](https://ywwywwyww.github.io/files/DeterGHTreeSlides.pdf)]  
 Presented at FOCS 2025 by Weixuan Yuan and Wuwei Yuan.
 
-Author order in theoretical computer science papers is alphabetical.
+Authors of the FOCS paper are listed alphabetically.
 
 ## Statistics
 
