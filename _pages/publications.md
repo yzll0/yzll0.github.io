@@ -15,7 +15,7 @@ Presented at FOCS 2025 by Weixuan Yuan and Wuwei Yuan.
 
 Authors of the FOCS paper are listed alphabetically.
 
-## Statistics
+## Statistics (undergraduate work, before 2023)
 
 **Optimal subsampling for principal component analysis**  
 Xuehu Zhu<sup>†</sup>, **Weixuan Yuan**<sup>†</sup>, Zongben Xu, Wenlin Dai.  
@@ -25,7 +25,7 @@ Xuehu Zhu<sup>†</sup>, **Weixuan Yuan**<sup>†</sup>, Zongben Xu, Wenlin Dai.
 Xinru Jia<sup>†</sup>, **Weixuan Yuan**<sup>†</sup>, Xingqiu Zhao, Xuehu Zhu.  
 *Scandinavian Journal of Statistics* 53(1), 575-611, 2026. [[paper](https://doi.org/10.1111/sjos.70052)]
 
-<sup>†</sup> Equal contribution. The statistics research was conducted during my undergraduate studies (before 2023).
+<sup>†</sup> Equal contribution.
 
 ## Under-review manuscript
 

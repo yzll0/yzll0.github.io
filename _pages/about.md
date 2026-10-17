@@ -11,7 +11,7 @@ I am Weixuan Yuan (袁伟轩), a Ph.D. student in Computer Science at ETH Züric
 
 Before my Ph.D., I received an M.Sc. in Data Science from ETH Zürich (2024; ranked 1st, Willi Studer Prize) and a B.Sc. in Mathematics from Xi'an Jiaotong University (2022; Honors Youth Program).
 
-**I am looking for 6-month research internships in post-training, AI for math, and agent harnesses (open to relocation).** See my [CV](/cv/) ([PDF](/files/Weixuan_Yuan_CV.pdf)).
+**I am looking for research internships of up to 6 months in post-training, AI for math, and agent harnesses (open to relocation).** See my [CV](/cv/) ([PDF](/files/Weixuan_Yuan_CV.pdf)).
 
 ## Selected research
 
