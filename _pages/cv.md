@@ -15,7 +15,7 @@ Zürich, Switzerland (open to relocation) · [weixuan.yuan@inf.ethz.ch](mailto:w
 
 **Research interests:** LLM reasoning, post-training (RLVR, synthetic data), AI for math and formal verification (Lean&nbsp;4), agent harnesses, theoretical computer science (graph algorithms).
 
-**Seeking research internships:** post-training, AI for math, agent harnesses (from January 2027, 3–6 months).
+**Seeking research internships:** post-training, AI for math, agent harnesses (6 months).
 
 ## Education
 
