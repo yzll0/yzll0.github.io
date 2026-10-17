@@ -4,6 +4,8 @@ permalink: /publications/
 author_profile: true
 ---
 
+See also my [Google Scholar profile](https://scholar.google.com/citations?user=r4C1FF4AAAAJ).
+
 ## Graph algorithms
 
 **Deterministic Almost-Linear-Time Gomory-Hu Trees**  
