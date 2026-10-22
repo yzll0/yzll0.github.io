@@ -56,4 +56,5 @@ Xinru Jia<sup>†</sup>, **Weixuan Yuan**<sup>†</sup>, Xingqiu Zhao, Xuehu Zhu
 ## Technical Skills
 
 **Programming:** Python, Lean 4.  
+**Post-training:** verl (GRPO and other RLVR methods).  
 **Agentic tools:** Codex, Claude Code (daily use; custom skills and AGENTS.md-based workflows).
